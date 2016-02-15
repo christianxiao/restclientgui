@@ -18,7 +18,8 @@ def http_client(schema,host,port,method,url,body,headers):
     else:
         conn = http.client.HTTPSConnection(host,port)
     if body:
-        body = urllib.parse.urlencode(body).encode('utf-8')
+        print(body)
+        body = urllib.parse.quote(body).encode('utf-8')
     conn.request(method,url,body,headers)
     response = conn.getresponse()
     headers = response.getheaders()

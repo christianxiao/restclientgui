@@ -1,0 +1,9 @@
+{
+    "schema": "http://",
+    "method": "POST",
+    "sheaders": "\n\n",
+    "data": "{\n    \"actions\": [\n        { \"remove\": { \"index\": \"my_index_v1\", \"alias\": \"my_index\" }},\n        { \"add\":    { \"index\": \"my_index_v2\", \"alias\": \"my_index\" }}\n    ]\n}\n",
+    "response_data": "\n\n",
+    "response_headers": "\n\n",
+    "url": "localhost:9200/_aliases"
+}

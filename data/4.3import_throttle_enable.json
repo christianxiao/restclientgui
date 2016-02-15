@@ -1,0 +1,9 @@
+{
+    "schema": "http://",
+    "method": "PUT",
+    "sheaders": "\n",
+    "data": "{\n    \"transient\" : {\n        \"indices.store.throttle.type\" : \"merge\" \n    }\n}\n",
+    "response_data": "\n",
+    "response_headers": "\n",
+    "url": "localhost:9200/_cluster/settings"
+}

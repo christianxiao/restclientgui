@@ -1,0 +1,9 @@
+{
+    "schema": "http://",
+    "method": "POST",
+    "sheaders": "\n",
+    "data": "\n",
+    "response_data": "\n",
+    "response_headers": "\n",
+    "url": "localhost:9200/my_index/_optimize?max_num_segments=1"
+}

@@ -1,0 +1,9 @@
+{
+    "schema": "http://",
+    "method": "PUT",
+    "sheaders": "\n",
+    "data": "{\n\t\"transient\":{\n\t\t\"cluster.routing.allocation.enable\" : \"all\"\n\t}\n}\n\n",
+    "response_data": "\n",
+    "response_headers": "\n",
+    "url": "localhost:9200/_cluster/settings"
+}
