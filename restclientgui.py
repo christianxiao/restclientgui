@@ -18,8 +18,8 @@ def http_client(schema,host,port,method,url,body,headers):
     else:
         conn = http.client.HTTPSConnection(host,port)
     if body:
-        print(body)
-        body = urllib.parse.quote(body).encode('utf-8')
+        # if body is string, it will be encoded as ISO-8851-1,not utf-8
+        body = body.encode("utf-8")
     conn.request(method,url,body,headers)
     response = conn.getresponse()
     headers = response.getheaders()
@@ -29,7 +29,8 @@ def http_client(schema,host,port,method,url,body,headers):
 
 def http_client_context(conn,method,url,body,headers):
     if body:
-        body = urllib.parse.urlencode(body).encode('utf-8')
+        # if body is string, it will be encoded as ISO-8851-1,not utf-8
+        body = body.encode("utf-8")
     conn.request(method,url,body,headers)
     response = conn.getresponse()
     html = response.read().decode('utf-8')
